@@ -1,0 +1,25 @@
+# Derleme dosyaları
+/bin/
+/build/
+/data/
+
+# İde dosyaları
+.idea/
+*.iml
+
+# Maven
+target/
+
+# Gradle
+.gradle/
+/build/
+
+# Konfigürasyon dosyaları
+application.properties
+
+# Log dosyaları
+*.log
+
+# Diğer geçici dosyalar
+*.tmp
+*.bak

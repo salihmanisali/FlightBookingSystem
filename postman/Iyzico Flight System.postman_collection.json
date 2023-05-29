@@ -1,0 +1,358 @@
+{
+	"info": {
+		"_postman_id": "94632a53-15ad-4627-a22b-b24db4703984",
+		"name": "Iyzico Flight System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2641917"
+	},
+	"item": [
+		{
+			"name": "Flight",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "tr",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"ucus1\",\n  \"description\": \"ucus1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/v1/flight",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"flight"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"ucus1\",\n  \"description\": \"ucus1 patch\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/v1/flight/7c6dad35-3dde-4ca0-9662-e9c70e946678",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"flight",
+								"7c6dad35-3dde-4ca0-9662-e9c70e946678"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "tr",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/v1/flight/1a23992f-d4d4-4c01-adbd-1435c97149ed",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"flight",
+								"1a23992f-d4d4-4c01-adbd-1435c97149ed"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll Pageable",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "tr",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/v1/flight/7c6dad35-3dde-4ca0-9662-e9c70e946678",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"flight",
+								"7c6dad35-3dde-4ca0-9662-e9c70e946678"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/v1/flight/7c6dad35-3dde-4ca0-9662-e9c70e946678",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"flight",
+								"7c6dad35-3dde-4ca0-9662-e9c70e946678"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Seat",
+			"item": [
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "tr",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/v1/flight/dd14e106-13df-4625-b3df-0b2a95e1f27a/seat",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"flight",
+								"dd14e106-13df-4625-b3df-0b2a95e1f27a",
+								"seat"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "tr",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\"1\"]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/v1/flight/dd14e106-13df-4625-b3df-0b2a95e1f27a/seat",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"flight",
+								"dd14e106-13df-4625-b3df-0b2a95e1f27a",
+								"seat"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "tr",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"seats\": [\n        {\n            \"seatNumber\": \"1\",\n            \"seatPrice\": 11\n        },\n        {\n            \"seatNumber\": \"2\",\n            \"seatPrice\": 21\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/v1/flight/dd14e106-13df-4625-b3df-0b2a95e1f27a/seat",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"flight",
+								"dd14e106-13df-4625-b3df-0b2a95e1f27a",
+								"seat"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "tr",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"seats\": [\n        {\n            \"seatNumber\": \"1\",\n            \"seatPrice\": 1123\n        },\n        {\n            \"seatNumber\": \"2\",\n            \"seatPrice\": 212\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/v1/flight/d9baaae7-a396-4b68-ba9d-09275db1dfc8/seat",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"flight",
+								"d9baaae7-a396-4b68-ba9d-09275db1dfc8",
+								"seat"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Payment",
+			"item": [
+				{
+					"name": "pay",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "tr",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"seatNumbers\": [\n    \"2\"\n  ],\n  \"cardHolderName\": \"string\",\n  \"cardNumber\": \"string\",\n  \"cardExpireMonth\": \"string\",\n  \"cardExpireYear\": \"string\",\n  \"cardCvc\": \"string\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/v1/flight/d9baaae7-a396-4b68-ba9d-09275db1dfc8/payment",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"v1",
+								"flight",
+								"d9baaae7-a396-4b68-ba9d-09275db1dfc8",
+								"payment"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "{{identifier}}",
+			"value": "47f71fec-edcd-4763-bf86-b60a3023c8ca",
+			"type": "string"
+		}
+	]
+}
